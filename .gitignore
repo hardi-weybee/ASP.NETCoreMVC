@@ -3,3 +3,6 @@
 ################################################################################
 
 /DemoApplication/.vs/DemoApplication
+/DemoApplication/DemoApplication/bin/Debug/netcoreapp3.1
+/DemoApplication/DemoApplication/obj
+/DemoApplication/DemoApplication/wwwroot/lib

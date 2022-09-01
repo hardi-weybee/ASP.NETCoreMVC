@@ -1,0 +1,105 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body class="=container">
+
+    <img src="~/images/dog.png" class="dog" /><br />
+
+    <h1 class="h1">Welcome to Book store application</h1>
+    <p>You are in the home page</p>
+
+    <input id="Button1" type="button" value="Click Here" class="btn btn-danger" />
+
+    @*-------razor syntax----------*@
+    <!--@DateTime.Now <br />
+
+    int sum = @(2+2)  <br />
+
+    Email ID - hardi@gmail.com  <br />
+
+    Hello - @@hello-->
+    @*--------conditional statements in razor engine-------*@
+    @*------1. if-else------*@
+    <!--@{
+        <h3>If - else</h3>
+        int a = 10;
+
+        if (a > 20)
+        {
+            a++;
+            <h5>If block - @a</h5>
+        }
+        else if (a == 10)
+        {
+            <h5>Else if block - @a</h5>
+        }
+        else
+        {
+            <h5>Else block - @a</h5>
+        }
+    }-->
+    @*-----2. ternary operator-----*@
+    <!--@{
+        int x = 5, y = 0;
+        <h3>Ternary Operator - @(x>10 ? y = 20 : y = 50)</h3>
+        <h5>Value of y is @y</h5>
+    }-->
+    @*------3. switch------*@
+    <!--@{
+        <h3>Switch</h3>
+        int b = 3;
+        switch (b)
+        {
+            case 1:<h5>This is 1</h5>
+                break;
+            case 2:<h5>This is 2</h5>
+                break;
+            case 3:<h5>This is 3</h5>
+                break;
+            case 4:<h5>This is 4</h5>
+                break;
+            case 5:<h5>This is 5</h5>
+                break;
+            default:<h5>Deafult</h5>
+                break;
+        }
+    }-->
+    @*---------------Loops-----------------*@
+    @*------1. for loop---------*@
+    <!--@{
+        <h3>For loop</h3>
+        for (int i = 0; i < 5; i++)
+        {
+            <h5>ForLoop- @i</h5>
+        }
+    }-->
+    @*-------2. Foreach loop------*@
+    <!--@{
+        <h3>Foreach loop</h3>
+
+        var l = new List<int>() { 10, 20, 30, 40, 50 };
+        foreach (var item in l)
+        {
+            <h5>Foreach loop- @item</h5>
+        }
+    }-->
+</body>
+<script src="~/lib/jquery/jquery.js"></script>
+</html>
+
+<script>
+    $(document).ready(function () {
+        alert("page loaded");
+    });
+</script>
