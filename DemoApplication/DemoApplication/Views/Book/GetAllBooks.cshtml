@@ -1,17 +1,19 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    ViewData["Title"] = "All Books";
 }
+@model IEnumerable<BookModel>
 
-<!DOCTYPE html>
+<div class="container">
+    <h3 class="display-4">All books</h3>
+    <div class="row">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GetAllBooks</title>
-</head>
-<body>
-    <h1>All Book list</h1>
-    <button>Click Here</button>
-</body>
-</html>
+        @foreach (var book in Model)
+        {
+
+        <div class="col-md-4">
+            <partial name="_bookThumbnail" model="@book" />
+        </div>
+        }
+
+    </div>
+</div>
